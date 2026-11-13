@@ -1,0 +1,317 @@
+backup ok: 14 files in <repo>/results_backup_20261114
+start: Fri Nov 13 21:15:02 UTC 2026
+python3 -m venv <venv>
+<venv>/bin/python -m pip install --upgrade pip
+Requirement already satisfied: pip in <venv>/lib/python3.12/site-packages (24.0)
+Collecting pip
+  Using cached pip-26.3-py3-none-any.whl.metadata (4.6 kB)
+Using cached pip-26.3-py3-none-any.whl (2.0 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.0
+    Uninstalling pip-24.0:
+      Successfully uninstalled pip-24.0
+Successfully installed pip-26.3
+<venv>/bin/python -m pip install -r requirements.txt
+Collecting cudaq==0.13.0 (from -r requirements.txt (line 4))
+  Using cached cudaq-0.13.0-py3-none-any.whl
+Collecting numpy==2.5.4 (from -r requirements.txt (line 5))
+  Using cached numpy-2.5.4-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+Collecting scipy==1.18.1 (from -r requirements.txt (line 6))
+  Using cached scipy-1.18.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+Collecting matplotlib==3.11.2 (from -r requirements.txt (line 7))
+  Using cached matplotlib-3.11.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (80 kB)
+Collecting pyscf==2.15.0 (from -r requirements.txt (line 8))
+  Using cached pyscf-2.15.0-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.4 kB)
+Collecting openfermion==1.8.1 (from -r requirements.txt (line 9))
+  Using cached openfermion-1.8.1-py3-none-any.whl.metadata (13 kB)
+Collecting openfermionpyscf==0.5 (from -r requirements.txt (line 10))
+  Using cached openfermionpyscf-0.5-py3-none-any.whl.metadata (6.9 kB)
+Collecting pytest==9.2.0 (from -r requirements.txt (line 11))
+  Using cached pytest-9.2.0-py3-none-any.whl.metadata (7.9 kB)
+Collecting pytest-cov==7.1.0 (from -r requirements.txt (line 12))
+  Using cached pytest_cov-7.1.0-py3-none-any.whl.metadata (32 kB)
+Collecting cuda-quantum-cu12==0.13.0 (from cudaq==0.13.0->-r requirements.txt (line 4))
+  Using cached cuda_quantum_cu12-0.13.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+Collecting contourpy>=1.0.1 (from matplotlib==3.11.2->-r requirements.txt (line 7))
+  Using cached contourpy-1.4.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (3.8 kB)
+Collecting cycler>=0.10 (from matplotlib==3.11.2->-r requirements.txt (line 7))
+  Using cached cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+Collecting fonttools>=4.28.2 (from matplotlib==3.11.2->-r requirements.txt (line 7))
+  Using cached fonttools-4.68.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (139 kB)
+Collecting kiwisolver>=1.3.1 (from matplotlib==3.11.2->-r requirements.txt (line 7))
+  Using cached kiwisolver-1.5.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (5.2 kB)
+Collecting packaging>=20.0 (from matplotlib==3.11.2->-r requirements.txt (line 7))
+  Using cached packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+Collecting pillow>=9 (from matplotlib==3.11.2->-r requirements.txt (line 7))
+  Using cached pillow-13.0.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+Collecting pyparsing>=3 (from matplotlib==3.11.2->-r requirements.txt (line 7))
+  Using cached pyparsing-3.3.3-py3-none-any.whl.metadata (5.9 kB)
+Collecting python-dateutil>=2.7 (from matplotlib==3.11.2->-r requirements.txt (line 7))
+  Using cached python_dateutil-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+Collecting h5py>=2.7 (from pyscf==2.15.0->-r requirements.txt (line 8))
+  Using cached h5py-3.16.0-cp312-cp312-manylinux_2_28_x86_64.whl.metadata (3.0 kB)
+Collecting setuptools (from pyscf==2.15.0->-r requirements.txt (line 8))
+  Using cached setuptools-84.2.1-py3-none-any.whl.metadata (6.6 kB)
+Collecting cirq-core>=1.6.0 (from openfermion==1.8.1->-r requirements.txt (line 9))
+  Using cached cirq_core-1.7.0-py3-none-any.whl.metadata (4.8 kB)
+Collecting deprecation (from openfermion==1.8.1->-r requirements.txt (line 9))
+  Using cached deprecation-2.1.0-py2.py3-none-any.whl.metadata (4.6 kB)
+Collecting networkx (from openfermion==1.8.1->-r requirements.txt (line 9))
+  Using cached networkx-3.7-py3-none-any.whl.metadata (6.7 kB)
+Collecting pubchempy (from openfermion==1.8.1->-r requirements.txt (line 9))
+  Using cached pubchempy-1.0.5-py3-none-any.whl.metadata (4.3 kB)
+Collecting requests (from openfermion==1.8.1->-r requirements.txt (line 9))
+  Using cached requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+Collecting sympy (from openfermion==1.8.1->-r requirements.txt (line 9))
+  Using cached sympy-1.14.0-py3-none-any.whl.metadata (12 kB)
+Collecting iniconfig>=2 (from pytest==9.2.0->-r requirements.txt (line 11))
+  Using cached iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+Collecting pluggy<2,>=1.6 (from pytest==9.2.0->-r requirements.txt (line 11))
+  Using cached pluggy-1.7.0-py3-none-any.whl.metadata (5.0 kB)
+Collecting pygments>=2.15 (from pytest==9.2.0->-r requirements.txt (line 11))
+  Using cached pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+Collecting coverage>=7.10.6 (from coverage[toml]>=7.10.6->pytest-cov==7.1.0->-r requirements.txt (line 12))
+  Using cached coverage-7.17.3-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (8.3 kB)
+Collecting astpretty~=3.0 (from cuda-quantum-cu12==0.13.0->cudaq==0.13.0->-r requirements.txt (line 4))
+  Using cached astpretty-3.0.0-py2.py3-none-any.whl.metadata (5.5 kB)
+Collecting custatevec-cu12~=1.10 (from cuda-quantum-cu12==0.13.0->cudaq==0.13.0->-r requirements.txt (line 4))
+  Using cached custatevec_cu12-1.15.1-py3-none-manylinux2014_x86_64.whl.metadata (2.4 kB)
+Collecting cutensornet-cu12~=2.9 (from cuda-quantum-cu12==0.13.0->cudaq==0.13.0->-r requirements.txt (line 4))
+  Using cached cutensornet_cu12-2.15.0-py3-none-manylinux2014_x86_64.whl.metadata (2.4 kB)
+Collecting cudensitymat-cu12~=0.3 (from cuda-quantum-cu12==0.13.0->cudaq==0.13.0->-r requirements.txt (line 4))
+  Using cached cudensitymat_cu12-0.7.1-py3-none-manylinux2014_x86_64.whl.metadata (2.5 kB)
+Collecting nvidia-cublas-cu12~=12.0 (from cuda-quantum-cu12==0.13.0->cudaq==0.13.0->-r requirements.txt (line 4))
+  Using cached nvidia_cublas_cu12-12.9.3.13-py3-none-manylinux_2_27_x86_64.whl.metadata (1.8 kB)
+Collecting nvidia-curand-cu12~=10.3 (from cuda-quantum-cu12==0.13.0->cudaq==0.13.0->-r requirements.txt (line 4))
+  Using cached nvidia_curand_cu12-10.3.10.19-py3-none-manylinux_2_27_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-cusparse-cu12~=12.5 (from cuda-quantum-cu12==0.13.0->cudaq==0.13.0->-r requirements.txt (line 4))
+  Using cached nvidia_cusparse_cu12-12.5.10.65-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.8 kB)
+Collecting nvidia-cuda-runtime-cu12~=12.0 (from cuda-quantum-cu12==0.13.0->cudaq==0.13.0->-r requirements.txt (line 4))
+  Using cached nvidia_cuda_runtime_cu12-12.9.79-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-cusolver-cu12~=11.4 (from cuda-quantum-cu12==0.13.0->cudaq==0.13.0->-r requirements.txt (line 4))
+  Using cached nvidia_cusolver_cu12-11.7.5.82-py3-none-manylinux_2_27_x86_64.whl.metadata (1.9 kB)
+Collecting nvidia-cuda-nvrtc-cu12~=12.0 (from cuda-quantum-cu12==0.13.0->cudaq==0.13.0->-r requirements.txt (line 4))
+  Using cached nvidia_cuda_nvrtc_cu12-12.9.86-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl.metadata (1.7 kB)
+Collecting cupy-cuda12x~=13.6.0 (from cuda-quantum-cu12==0.13.0->cudaq==0.13.0->-r requirements.txt (line 4))
+  Using cached cupy_cuda12x-13.6.0-cp312-cp312-manylinux2014_x86_64.whl.metadata (2.4 kB)
+Collecting cutensor-cu12<3,>=2.5 (from cudensitymat-cu12~=0.3->cuda-quantum-cu12==0.13.0->cudaq==0.13.0->-r requirements.txt (line 4))
+  Using cached cutensor_cu12-2.8.1-py3-none-manylinux2014_x86_64.whl.metadata (3.0 kB)
+Collecting fastrlock>=0.5 (from cupy-cuda12x~=13.6.0->cuda-quantum-cu12==0.13.0->cudaq==0.13.0->-r requirements.txt (line 4))
+  Using cached fastrlock-0.8.4-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (9.8 kB)
+Collecting nvidia-nvjitlink-cu12 (from nvidia-cusolver-cu12~=11.4->cuda-quantum-cu12==0.13.0->cudaq==0.13.0->-r requirements.txt (line 4))
+  Using cached nvidia_nvjitlink_cu12-12.9.86-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl.metadata (1.7 kB)
+Collecting attrs>=21.3.0 (from cirq-core>=1.6.0->openfermion==1.8.1->-r requirements.txt (line 9))
+  Using cached attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+Collecting duet>=0.2.8 (from cirq-core>=1.6.0->openfermion==1.8.1->-r requirements.txt (line 9))
+  Using cached duet-0.2.9-py3-none-any.whl.metadata (2.3 kB)
+Collecting pandas<3.1.0.dev,>=2.3 (from cirq-core>=1.6.0->openfermion==1.8.1->-r requirements.txt (line 9))
+  Using cached pandas-3.0.6-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (79 kB)
+Collecting tqdm>=4.12 (from cirq-core>=1.6.0->openfermion==1.8.1->-r requirements.txt (line 9))
+  Using cached tqdm-4.70.1-py3-none-any.whl.metadata (57 kB)
+Collecting tzdata (from python-dateutil>=2.7->matplotlib==3.11.2->-r requirements.txt (line 7))
+  Using cached tzdata-2026.6-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting charset_normalizer<4,>=2 (from requests->openfermion==1.8.1->-r requirements.txt (line 9))
+  Using cached charset_normalizer-3.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (46 kB)
+Collecting idna<4,>=2.5 (from requests->openfermion==1.8.1->-r requirements.txt (line 9))
+  Using cached idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+Collecting urllib3<3,>=1.26 (from requests->openfermion==1.8.1->-r requirements.txt (line 9))
+  Using cached urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+Collecting certifi>=2023.5.7 (from requests->openfermion==1.8.1->-r requirements.txt (line 9))
+  Using cached certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)
+Collecting mpmath<1.4,>=1.1.0 (from sympy->openfermion==1.8.1->-r requirements.txt (line 9))
+  Using cached mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+Using cached numpy-2.5.4-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.7 MB)
+Using cached scipy-1.18.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (35.3 MB)
+Using cached matplotlib-3.11.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (9.9 MB)
+Using cached pyscf-2.15.0-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (40.6 MB)
+Using cached openfermion-1.8.1-py3-none-any.whl (44.7 MB)
+Using cached openfermionpyscf-0.5-py3-none-any.whl (16 kB)
+Using cached pytest-9.2.0-py3-none-any.whl (411 kB)
+Using cached pytest_cov-7.1.0-py3-none-any.whl (22 kB)
+Using cached cuda_quantum_cu12-0.13.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (122.5 MB)
+Using cached astpretty-3.0.0-py2.py3-none-any.whl (4.9 kB)
+Using cached cudensitymat_cu12-0.7.1-py3-none-manylinux2014_x86_64.whl (56.6 MB)
+Using cached cupy_cuda12x-13.6.0-cp312-cp312-manylinux2014_x86_64.whl (112.9 MB)
+Using cached custatevec_cu12-1.15.1-py3-none-manylinux2014_x86_64.whl (73.2 MB)
+Using cached cutensor_cu12-2.8.1-py3-none-manylinux2014_x86_64.whl (306.6 MB)
+Using cached cutensornet_cu12-2.15.0-py3-none-manylinux2014_x86_64.whl (3.8 MB)
+Using cached nvidia_cublas_cu12-12.9.3.13-py3-none-manylinux_2_27_x86_64.whl (581.2 MB)
+Using cached nvidia_cuda_nvrtc_cu12-12.9.86-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (89.6 MB)
+Using cached nvidia_cuda_runtime_cu12-12.9.79-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (3.5 MB)
+Using cached nvidia_curand_cu12-10.3.10.19-py3-none-manylinux_2_27_x86_64.whl (68.3 MB)
+Using cached nvidia_cusolver_cu12-11.7.5.82-py3-none-manylinux_2_27_x86_64.whl (338.1 MB)
+Using cached nvidia_cusparse_cu12-12.5.10.65-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (366.5 MB)
+Using cached pluggy-1.7.0-py3-none-any.whl (27 kB)
+Using cached cirq_core-1.7.0-py3-none-any.whl (2.1 MB)
+Using cached networkx-3.7-py3-none-any.whl (2.1 MB)
+Using cached pandas-3.0.6-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (10.8 MB)
+Using cached attrs-26.1.0-py3-none-any.whl (67 kB)
+Using cached contourpy-1.4.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (383 kB)
+Using cached coverage-7.17.3-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (264 kB)
+Using cached cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Using cached duet-0.2.9-py3-none-any.whl (29 kB)
+Using cached fastrlock-0.8.4-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (63 kB)
+Using cached fonttools-4.68.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.4 MB)
+Using cached h5py-3.16.0-cp312-cp312-manylinux_2_28_x86_64.whl (5.4 MB)
+Using cached iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+Using cached kiwisolver-1.5.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.5 MB)
+Using cached packaging-26.3-py3-none-any.whl (129 kB)
+Using cached pillow-13.0.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.1 MB)
+Using cached pygments-2.21.0-py3-none-any.whl (1.3 MB)
+Using cached pyparsing-3.3.3-py3-none-any.whl (126 kB)
+Using cached python_dateutil-4.0.0-py3-none-any.whl (92 kB)
+Using cached requests-2.34.2-py3-none-any.whl (73 kB)
+Using cached charset_normalizer-3.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (257 kB)
+Using cached idna-3.20-py3-none-any.whl (69 kB)
+Using cached urllib3-2.8.0-py3-none-any.whl (135 kB)
+Using cached certifi-2026.10.23-py3-none-any.whl (135 kB)
+Using cached tqdm-4.70.1-py3-none-any.whl (80 kB)
+Using cached deprecation-2.1.0-py2.py3-none-any.whl (11 kB)
+Using cached nvidia_nvjitlink_cu12-12.9.86-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (39.7 MB)
+Using cached pubchempy-1.0.5-py3-none-any.whl (21 kB)
+Using cached setuptools-84.2.1-py3-none-any.whl (876 kB)
+Using cached sympy-1.14.0-py3-none-any.whl (6.3 MB)
+Using cached mpmath-1.3.0-py3-none-any.whl (536 kB)
+Using cached tzdata-2026.6-py2.py3-none-any.whl (348 kB)
+Installing collected packages: mpmath, fastrlock, cutensor-cu12, custatevec-cu12, urllib3, tzdata, tqdm, sympy, setuptools, pyparsing, pygments, pubchempy, pluggy, pillow, packaging, nvidia-nvjitlink-cu12, nvidia-curand-cu12, nvidia-cuda-runtime-cu12, nvidia-cuda-nvrtc-cu12, numpy, networkx, kiwisolver, iniconfig, idna, fonttools, duet, cycler, cutensornet-cu12, coverage, charset_normalizer, certifi, attrs, astpretty, scipy, requests, python-dateutil, pytest, nvidia-cusparse-cu12, nvidia-cublas-cu12, h5py, deprecation, cupy-cuda12x, cudensitymat-cu12, contourpy, pytest-cov, pyscf, pandas, nvidia-cusolver-cu12, matplotlib, cuda-quantum-cu12, cirq-core, openfermion, cudaq, openfermionpyscf
+
+Successfully installed astpretty-3.0.0 attrs-26.1.0 certifi-2026.10.23 charset_normalizer-3.5.2 cirq-core-1.7.0 contourpy-1.4.0 coverage-7.17.3 cuda-quantum-cu12-0.13.0 cudaq-0.13.0 cudensitymat-cu12-0.7.1 cupy-cuda12x-13.6.0 custatevec-cu12-1.15.1 cutensor-cu12-2.8.1 cutensornet-cu12-2.15.0 cycler-0.12.1 deprecation-2.1.0 duet-0.2.9 fastrlock-0.8.4 fonttools-4.68.0 h5py-3.16.0 idna-3.20 iniconfig-2.3.1 kiwisolver-1.5.1 matplotlib-3.11.2 mpmath-1.3.0 networkx-3.7 numpy-2.5.4 nvidia-cublas-cu12-12.9.3.13 nvidia-cuda-nvrtc-cu12-12.9.86 nvidia-cuda-runtime-cu12-12.9.79 nvidia-curand-cu12-10.3.10.19 nvidia-cusolver-cu12-11.7.5.82 nvidia-cusparse-cu12-12.5.10.65 nvidia-nvjitlink-cu12-12.9.86 openfermion-1.8.1 openfermionpyscf-0.5 packaging-26.3 pandas-3.0.6 pillow-13.0.0 pluggy-1.7.0 pubchempy-1.0.5 pygments-2.21.0 pyparsing-3.3.3 pyscf-2.15.0 pytest-9.2.0 pytest-cov-7.1.0 python-dateutil-4.0.0 requests-2.34.2 scipy-1.18.1 setuptools-84.2.1 sympy-1.14.0 tqdm-4.70.1 tzdata-2026.6 urllib3-2.8.0
+touch <venv>/.installed
+<venv>/bin/python -m pytest --cov=src --cov-report=term-missing
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.2.0, pluggy-1.7.0
+rootdir: <repo>
+configfile: pytest.ini
+testpaths: tests
+plugins: cov-7.1.0
+collected 164 items
+
+tests/test_ghz.py .........                                              [  5%]
+tests/test_ghz_plots.py .........                                        [ 10%]
+tests/test_ghz_resume.py ....................................            [ 32%]
+tests/test_ghz_worker.py ..................................              [ 53%]
+tests/test_h2_plots.py .........                                         [ 59%]
+tests/test_h2_vqe.py ............................                        [ 76%]
+tests/test_hardware.py ................                                  [ 85%]
+tests/test_hardware_detect.py ..................                         [ 96%]
+tests/test_run_script.py .....                                           [100%]
+
+=============================== warnings summary ===============================
+tests/test_h2_vqe.py::test_hamiltonian_has_15_pauli_terms_including_identity
+tests/test_h2_vqe.py::test_main_uses_the_tolerance_for_every_vqe_run_and_records_it
+tests/test_h2_vqe.py::test_quick_cli_writes_every_artifact
+  <repo>/src/h2_vqe.py:114: DeprecationWarning: use `term_count` instead
+    return int(hamiltonian.get_term_count())
+
+tests/test_h2_vqe.py::test_hamiltonian_acts_on_4_qubits
+  <repo>/tests/test_h2_vqe.py:46: DeprecationWarning: use `qubit_count` instead
+    assert h2_equilibrium.hamiltonian.get_qubit_count() == 4
+
+tests/test_h2_vqe.py::test_main_uses_the_tolerance_for_every_vqe_run_and_records_it
+tests/test_h2_vqe.py::test_quick_cli_writes_every_artifact
+  <repo>/src/h2_vqe.py:294: DeprecationWarning: use `qubit_count` instead
+    BASIS, equilibrium.hamiltonian.get_qubit_count(), n_terms)  # fmt: skip
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.12.3-final-0 ________________
+
+Name                   Stmts   Miss  Cover   Missing
+----------------------------------------------------
+src/__init__.py            0      0   100%
+src/ghz_benchmark.py     332     23    93%   84-88, 129, 234-236, 321, 441-451, 469, 475-476, 539
+src/ghz_plots.py          57      0   100%
+src/h2_plots.py           67      0   100%
+src/h2_vqe.py            175      9    95%   50-53, 153, 287-289, 342
+src/hardware.py           97      0   100%
+----------------------------------------------------
+TOTAL                    728     32    96%
+======================= 164 passed, 6 warnings in 43.38s =======================
+<venv>/bin/python -m src.ghz_benchmark
+Hardware: GPU=NVIDIA GeForce RTX 4050 Laptop GPU, RAM=7.8 GiB
+Correctness qpp-cpu n=8 OK: {'00000000': 2025, '11111111': 1975}
+Correctness nvidia n=8 OK: {'00000000': 2058, '11111111': 1942}
+qpp-cpu n=20 median=1.0279 s std=0.0146 s (0.02 GiB)
+qpp-cpu n=21 median=2.4196 s std=0.0435 s (0.03 GiB)
+qpp-cpu n=22 median=5.4682 s std=0.0883 s (0.06 GiB)
+qpp-cpu n=23 median=11.8392 s std=0.1734 s (0.12 GiB)
+qpp-cpu n=24 median=26.0354 s std=0.2627 s (0.25 GiB)
+qpp-cpu n=25 median=54.3897 s std=0.5528 s (0.50 GiB)
+qpp-cpu n=26 median=118.5332 s std=1.7718 s (1.00 GiB)
+qpp-cpu n=27 median=258.0869 s std=3.1155 s (2.00 GiB)
+SKIP qpp-cpu n=28: statevector 4.00 GiB (fp64), estimated peak 10.55 GiB, more than the usable free RAM
+nvidia n=20 median=0.0010 s std=0.0003 s (0.01 GiB)
+nvidia n=21 median=0.0010 s std=0.0005 s (0.02 GiB)
+nvidia n=22 median=0.0037 s std=0.0005 s (0.03 GiB)
+nvidia n=23 median=0.0080 s std=0.0005 s (0.06 GiB)
+nvidia n=24 median=0.0158 s std=0.0007 s (0.12 GiB)
+nvidia n=25 median=0.0309 s std=0.0005 s (0.25 GiB)
+nvidia n=26 median=0.0643 s std=0.0006 s (0.50 GiB)
+nvidia n=27 median=0.1336 s std=0.0004 s (1.00 GiB)
+nvidia n=28 median=0.2660 s std=0.0009 s (2.00 GiB)
+CSV results/ghz_benchmark.csv has 17 rows
+Wrote results/ghz_benchmark.png
+Wrote results/ghz_speedup.png
+<venv>/bin/python -m src.h2_vqe
+<repo>/src/h2_vqe.py:114: DeprecationWarning: use `term_count` instead
+  return int(hamiltonian.get_term_count())
+<repo>/src/h2_vqe.py:294: DeprecationWarning: use `qubit_count` instead
+  BASIS, equilibrium.hamiltonian.get_qubit_count(), n_terms)  # fmt: skip
+H2 / sto-3g / Jordan-Wigner: 4 qubits, 15 Pauli terms (identity included)
+R=0.735 A: E_vqe=-1.13730604 E_fci=-1.13730604 error=0.00000 mHa after 105 evaluations
+R=0.30 A  E_vqe=-0.601804  E_fci=-0.601804  error=8.44e-12 mHa  (101 evals)
+R=0.35 A  E_vqe=-0.789269  E_fci=-0.789269  error=7.99e-12 mHa  (90 evals)
+R=0.40 A  E_vqe=-0.914150  E_fci=-0.914150  error=8.77e-12 mHa  (97 evals)
+R=0.45 A  E_vqe=-0.998416  E_fci=-0.998416  error=1.01e-11 mHa  (94 evals)
+R=0.50 A  E_vqe=-1.055160  E_fci=-1.055160  error=6.44e-12 mHa  (76 evals)
+R=0.55 A  E_vqe=-1.092630  E_fci=-1.092630  error=7.99e-12 mHa  (77 evals)
+R=0.60 A  E_vqe=-1.116286  E_fci=-1.116286  error=4.22e-12 mHa  (95 evals)
+R=0.65 A  E_vqe=-1.129905  E_fci=-1.129905  error=6.88e-12 mHa  (98 evals)
+R=0.70 A  E_vqe=-1.136189  E_fci=-1.136189  error=6.22e-12 mHa  (79 evals)
+R=0.75 A  E_vqe=-1.137117  E_fci=-1.137117  error=5.11e-12 mHa  (86 evals)
+R=0.80 A  E_vqe=-1.134148  E_fci=-1.134148  error=3.77e-12 mHa  (96 evals)
+R=0.85 A  E_vqe=-1.128362  E_fci=-1.128362  error=4.88e-12 mHa  (100 evals)
+R=0.90 A  E_vqe=-1.120560  E_fci=-1.120560  error=6.44e-12 mHa  (98 evals)
+R=0.95 A  E_vqe=-1.111339  E_fci=-1.111339  error=3.77e-12 mHa  (86 evals)
+R=1.00 A  E_vqe=-1.101150  E_fci=-1.101150  error=4.88e-12 mHa  (89 evals)
+R=1.05 A  E_vqe=-1.090342  E_fci=-1.090342  error=4.00e-12 mHa  (105 evals)
+R=1.10 A  E_vqe=-1.079193  E_fci=-1.079193  error=3.11e-12 mHa  (95 evals)
+R=1.15 A  E_vqe=-1.067930  E_fci=-1.067930  error=2.22e-12 mHa  (98 evals)
+R=1.20 A  E_vqe=-1.056741  E_fci=-1.056741  error=2.44e-12 mHa  (95 evals)
+R=1.25 A  E_vqe=-1.045783  E_fci=-1.045783  error=3.11e-12 mHa  (94 evals)
+R=1.30 A  E_vqe=-1.035186  E_fci=-1.035186  error=2.89e-12 mHa  (98 evals)
+R=1.35 A  E_vqe=-1.025054  E_fci=-1.025054  error=2.44e-12 mHa  (120 evals)
+R=1.40 A  E_vqe=-1.015468  E_fci=-1.015468  error=2.89e-12 mHa  (106 evals)
+R=1.45 A  E_vqe=-1.006487  E_fci=-1.006487  error=3.11e-12 mHa  (140 evals)
+R=1.50 A  E_vqe=-0.998149  E_fci=-0.998149  error=1.22e-11 mHa  (114 evals)
+R=1.55 A  E_vqe=-0.990476  E_fci=-0.990476  error=3.22e-12 mHa  (136 evals)
+R=1.60 A  E_vqe=-0.983473  E_fci=-0.983473  error=5.77e-12 mHa  (127 evals)
+R=1.65 A  E_vqe=-0.977130  E_fci=-0.977130  error=3.00e-12 mHa  (148 evals)
+R=1.70 A  E_vqe=-0.971427  E_fci=-0.971427  error=1.32e-11 mHa  (166 evals)
+R=1.75 A  E_vqe=-0.966335  E_fci=-0.966335  error=8.66e-12 mHa  (170 evals)
+R=1.80 A  E_vqe=-0.961817  E_fci=-0.961817  error=3.89e-12 mHa  (242 evals)
+R=1.85 A  E_vqe=-0.957833  E_fci=-0.957833  error=2.89e-12 mHa  (234 evals)
+R=1.90 A  E_vqe=-0.954339  E_fci=-0.954339  error=2.66e-12 mHa  (298 evals)
+R=1.95 A  E_vqe=-0.951290  E_fci=-0.951290  error=1.07e-11 mHa  (308 evals)
+R=2.00 A  E_vqe=-0.948641  E_fci=-0.948641  error=1.81e-11 mHa  (297 evals)
+R=2.05 A  E_vqe=-0.946350  E_fci=-0.946350  error=2.28e-11 mHa  (299 evals)
+R=2.10 A  E_vqe=-0.944375  E_fci=-0.944375  error=2.32e-11 mHa  (294 evals)
+R=2.15 A  E_vqe=-0.942678  E_fci=-0.942678  error=4.16e-11 mHa  (424 evals)
+R=2.20 A  E_vqe=-0.941224  E_fci=-0.941224  error=2.48e-11 mHa  (488 evals)
+R=2.25 A  E_vqe=-0.939982  E_fci=-0.939982  error=4.20e-11 mHa  (535 evals)
+R=2.30 A  E_vqe=-0.938922  E_fci=-0.938922  error=5.55e-11 mHa  (594 evals)
+R=2.35 A  E_vqe=-0.938021  E_fci=-0.938021  error=9.67e-11 mHa  (551 evals)
+R=2.40 A  E_vqe=-0.937255  E_fci=-0.937255  error=7.06e-11 mHa  (691 evals)
+R=2.45 A  E_vqe=-0.936605  E_fci=-0.936605  error=1.11e-10 mHa  (991 evals)
+R=2.50 A  E_vqe=-0.936055  E_fci=-0.936055  error=2.60e-10 mHa  (997 evals)
+VQE equilibrium: R=0.7349 A, E_min=-1.137306 Ha
+Wrote plots to results
+Maximum |E_vqe - E_fci| over the sweep: 0.00000 mHa
+<venv>/bin/python -m src.ghz_benchmark --plot-only
+Wrote results/ghz_benchmark.png
+Wrote results/ghz_speedup.png
+<venv>/bin/python -m src.h2_vqe --plot-only
+Wrote plots to results
+end: Fri Nov 13 22:10:52 UTC 2026
+MAKE_ALL_DONE rc=0

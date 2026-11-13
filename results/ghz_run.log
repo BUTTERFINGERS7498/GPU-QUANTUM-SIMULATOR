@@ -1,0 +1,11 @@
+Hardware: GPU=NVIDIA GeForce RTX 4050 Laptop GPU, RAM=7.8 GiB
+Correctness qpp-cpu n=8 OK: {'00000000': 2054, '11111111': 1946}
+Correctness nvidia n=8 OK: {'00000000': 2041, '11111111': 1959}
+qpp-cpu n=20 median=1.1333 s std=0.0318 s (0.02 GiB)
+qpp-cpu n=21 median=2.6834 s std=0.0565 s (0.03 GiB)
+qpp-cpu n=22 median=5.2956 s std=0.1537 s (0.06 GiB)
+qpp-cpu n=23 median=11.9551 s std=0.2442 s (0.12 GiB)
+qpp-cpu n=24 median=24.8994 s std=0.1620 s (0.25 GiB)
+qpp-cpu n=25 median=54.2762 s std=0.3889 s (0.50 GiB)
+qpp-cpu n=26 median=119.6373 s std=4.4868 s (1.00 GiB)
+qpp-cpu n=27 median=256.4515 s std=7.9991 s (2.00 GiB)

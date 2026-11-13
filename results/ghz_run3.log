@@ -1,0 +1,15 @@
+Hardware: GPU=NVIDIA GeForce RTX 4050 Laptop GPU, RAM=7.8 GiB
+Correctness qpp-cpu n=8 OK: {'00000000': 2072, '11111111': 1928}
+Correctness nvidia n=8 OK: {'00000000': 1954, '11111111': 2046}
+nvidia n=20 median=0.0012 s std=0.0001 s (0.01 GiB)
+nvidia n=21 median=0.0013 s std=0.0002 s (0.02 GiB)
+nvidia n=22 median=0.0043 s std=0.0004 s (0.03 GiB)
+nvidia n=23 median=0.0084 s std=0.0002 s (0.06 GiB)
+nvidia n=24 median=0.0174 s std=0.0006 s (0.12 GiB)
+nvidia n=25 median=0.0344 s std=0.0007 s (0.25 GiB)
+nvidia n=26 median=0.0689 s std=0.0009 s (0.50 GiB)
+nvidia n=27 median=0.1467 s std=0.0006 s (1.00 GiB)
+nvidia n=28 median=0.2909 s std=0.0007 s (2.00 GiB)
+CSV results/ghz_benchmark.csv has 17 rows
+Wrote results/ghz_benchmark.png
+Wrote results/ghz_speedup.png

@@ -1,0 +1,11 @@
+Hardware: GPU=NVIDIA GeForce RTX 4050 Laptop GPU, RAM=7.8 GiB
+Correctness qpp-cpu n=8 OK: {'00000000': 2037, '11111111': 1963}
+Correctness nvidia n=8 OK: {'00000000': 1975, '11111111': 2025}
+RESUME qpp-cpu n=20: already in the CSV, skipped
+RESUME qpp-cpu n=21: already in the CSV, skipped
+RESUME qpp-cpu n=22: already in the CSV, skipped
+RESUME qpp-cpu n=23: already in the CSV, skipped
+RESUME qpp-cpu n=24: already in the CSV, skipped
+RESUME qpp-cpu n=25: already in the CSV, skipped
+RESUME qpp-cpu n=26: already in the CSV, skipped
+RESUME qpp-cpu n=27: already in the CSV, skipped
