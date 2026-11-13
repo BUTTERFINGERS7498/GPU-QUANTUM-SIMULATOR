@@ -1,0 +1,12 @@
+# Pinned to the versions used for every result in this repository.
+# cudaq 0.13.0 is pinned on purpose: on the test machine (RTX 4050 Laptop, driver 566.07,
+# WSL2) the "nvidia" target failed in cudaq 0.16.0 and worked in 0.13.0.
+cudaq==0.13.0
+numpy==2.5.4
+scipy==1.18.1
+matplotlib==3.11.2
+pyscf==2.15.0
+openfermion==1.8.1
+openfermionpyscf==0.5
+pytest==9.2.0
+pytest-cov==7.1.0
