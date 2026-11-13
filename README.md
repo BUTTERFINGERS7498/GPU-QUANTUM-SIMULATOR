@@ -1,6 +1,6 @@
 <div align="center">
 
-# gpu-quantum-sim
+# GPU-Quantum-SIM
 
 ![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=flat&logo=python&logoColor=white) ![CUDA-Q](https://img.shields.io/badge/CUDA--Q-0.13.0-76B900?style=flat&logo=nvidia&logoColor=white) ![Tests](https://img.shields.io/badge/tests-164%20passing-0b6e4f?style=flat) ![Coverage](https://img.shields.io/badge/coverage-96%25-0b6e4f?style=flat) ![License](https://img.shields.io/badge/license-MIT-0b6e4f?style=flat)
 
